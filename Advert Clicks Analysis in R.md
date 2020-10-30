@@ -333,7 +333,7 @@ age <- dataset$age
 age_frequency <- table(age)
 barplot(age_frequency)
 ```
-![*Age Barplot.*](C:\Users\User\Desktop\Advert Clicks Analysis\Advert-Click-Analysis-in-R/Rplot2.png)
+![*Age Barplot.*](Rplot2.png)
 
 - We can see that our graph is positively skewed. It also shows that most people who visit the site are in the age of 31 years.
 
@@ -343,7 +343,7 @@ country_frequency <- table(country)
 country_frequency
 barplot(country_frequency)
 ```
-![*Country Barplot.*](C:\Users\User\Desktop\Advert Clicks Analysis\Advert-Click-Analysis-in-R/Rplot1.png)
+![*Country Barplot.*](Rplot1.png)
 
 The country plot is a bit squeezed but from viewing the countries the following are the top countries with the highest clicks of 9 and 8;
 
@@ -374,7 +374,7 @@ male <- dataset$male
 male_frequency <- table(male)
 barplot(male_frequency)
 ```
-![*Male Barplot.*](C:\Users\User\Desktop\Advert Clicks Analysis\Advert-Click-Analysis-in-R/Rplot3.png)
+![*Male Barplot.*](Rplot3.png)
 
 - The most number of people who visited the site were not male.
 
@@ -383,7 +383,7 @@ clicked_on_ad <- dataset$clicked_on_ad
 clicked_on_ad_frequency <- table(clicked_on_ad)
 barplot(clicked_on_ad_frequency)
 ```
-![*Clicked Barplot.*](C:\Users\User\Desktop\Advert Clicks Analysis\Advert-Click-Analysis-in-R/Rplot8.png)
+![*Clicked Barplot.*](Rplot8.png)
 
 ### **Bivariate Analysis**
 
@@ -397,7 +397,7 @@ In our bivariate analysis, we are going to look at several specific columns in o
 daily_time_spent_on_site <- dataset$daily_time_spent_on_site
 plot(daily_time_spent_on_site, age, xlab="Daily time spent on site", ylab="Age")
 ```
-![](C:\Users\User\Desktop\Advert Clicks Analysis\Advert-Click-Analysis-in-R/Rplot4.png)
+![](Rplot4.png)
 
 - There doesn't seem to be a relation between the two fields
 
@@ -406,7 +406,7 @@ plot(daily_time_spent_on_site, age, xlab="Daily time spent on site", ylab="Age")
 area_income <- dataset$area_income
 plot(daily_time_spent_on_site, area_income, xlab="Daily time spent on site", ylab="Area income")
 ```
-![](C:\Users\User\Desktop\Advert Clicks Analysis\Advert-Click-Analysis-in-R/Rplot5.png)
+![](Rplot5.png)
 
 - There doesn't seem to be a relation between the two fields
 
@@ -415,7 +415,7 @@ plot(daily_time_spent_on_site, area_income, xlab="Daily time spent on site", yla
 daily_internet_usage <- dataset$daily_internet_usage
 plot(daily_internet_usage, age, xlab="Daily internet usage", ylab="Age")
 ```
-![](C:\Users\User\Desktop\Advert Clicks Analysis\Advert-Click-Analysis-in-R/Rplot6.png)
+![](Rplot6.png)
 
 - There doesn't seem to be a relation between the two fields
 
@@ -423,7 +423,7 @@ plot(daily_internet_usage, age, xlab="Daily internet usage", ylab="Age")
 ```R
 plot(daily_internet_usage, daily_time_spent_on_site, xlab="Daily internet usage", ylab="Daily time spent on site")
 ```
-![](C:\Users\User\Desktop\Advert Clicks Analysis\Advert-Click-Analysis-in-R/Rplot7.png)
+![](Rplot7.png)
 
 - From the above plot, there seems to be a relationship between the two fields because there are two clusters
 formed on the plot. It seem the higher one spends time on the internet the higher time they spend on the site.
@@ -435,7 +435,7 @@ corr <- cor(numeric_cols, method = "pearson")
 corr <- round(corr, 2)
 view(corr)
 ```
-![](C:\Users\User\Desktop\Advert Clicks Analysis\Advert-Click-Analysis-in-R/corr.png)
+![](corr.png)
 
 - From the correlation matrix, we can see that clicking on an ad had a strong relation with daily time spent on the site and the daily internet usage of a person. Although there was also a relation with some other fields, the two had the higher correlation scores.
 
@@ -446,8 +446,26 @@ view(corr)
 
 ### **Conclusions**
 
-- W
+- The people that clicked on the adverts and those that did not click were the same number.
+- The people that spent more time on the site were those that spent more time on the internet for the whole day.
+- The countries that had the highest number of ad clicks were:
+  - Czech Republic
+  - France
+  - Afghanistan
+  - Australia
+  - Cyprus
+  - Greece
+  - Liberia
+  - Turkey
+  - South Africa
+  - Senegal
+  - Peru
+- Most people who visited the site were within the age rage of 28-37 years.
+- More females visited the site compared to males.
 
 ### **Recommendations**
+- I would recommend that the site contains more content that is a bit inclined to female viewers since they have a higher percentage of viewership.
+- The entrepreneur could also concentrate on providing his services giving priority to the countries with more clicks on the ads.
 
 ## **Data Relevance**
+- Our data was relevant for our analysis but more data could be take into account in order to get a more deep insight of the individuals of interest.
